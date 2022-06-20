@@ -13,7 +13,7 @@ export class AllProductsComponent implements OnInit {
 
   products:any[]=[];
   categories:any[]=[];
-  cartProducts:any[]=[]
+  cartProducts:any[]=[];
   constructor(private service:ProductsService) { }
 
   ngOnInit(): void {
@@ -49,7 +49,7 @@ export class AllProductsComponent implements OnInit {
   getProductsCategory(keyword:string){
       this.service.getProductsByCategory(keyword).subscribe((res:any) =>{
           this.products=res
-      })     
+      })
   }
 
   addToCart(event:any){
@@ -58,7 +58,7 @@ export class AllProductsComponent implements OnInit {
     if("cart" in localStorage)
     {
       this.cartProducts=JSON.parse(localStorage.getItem("cart")!)
-      let exist=this.cartProducts.find(item=>item.id==event.item.id)
+      let exist=this.cartProducts.find(item=>item.item.id==event.item.id)
       if(exist)
       {
         alert("product is already in your cart")
@@ -68,7 +68,7 @@ export class AllProductsComponent implements OnInit {
         this.cartProducts.push(event)
         localStorage.setItem('cart',JSON.stringify(this.cartProducts))
       }
-     
+
     }
     else{
       this.cartProducts.push(event)

@@ -21,14 +21,13 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     BrowserModule,
     FormsModule
-    
-    
+
   ],
   exports:[
     HeaderComponent,
     SelectComponent,
     FormsModule,
-  
+
   ]
 })
 export class SharedModule { }
