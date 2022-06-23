@@ -14,6 +14,7 @@ export class AllProductsComponent implements OnInit {
   products:any[]=[];
   categories:any[]=[];
   cartProducts:any[]=[];
+ 
   constructor(private service:ProductsService) { }
 
   ngOnInit(): void {

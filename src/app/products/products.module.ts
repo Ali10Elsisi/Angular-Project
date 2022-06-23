@@ -4,6 +4,7 @@ import { AllProductsComponent } from './components/all-products/all-products.com
 import { ProductsDetailsComponent } from './components/products-details/products-details.component';
 import { ProductComponent } from './components/product/product.component';
 import { SharedModule } from '../shared/shared.module';
+import { SpinnerComponent } from '../shared/components/spinner/spinner.component';
 
 
 
@@ -11,7 +12,8 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     AllProductsComponent,
     ProductsDetailsComponent,
-    ProductComponent
+    ProductComponent,
+    SpinnerComponent
   ],
   imports: [
     CommonModule,

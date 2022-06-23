@@ -4,6 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SharedService {
+  getAllProducts: any;
+  getAllCategories: any;
+  getProductsByCategory: any;
 
   constructor() { }
 }

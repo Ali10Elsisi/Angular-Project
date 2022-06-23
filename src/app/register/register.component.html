@@ -1,0 +1,120 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class=" login-card card">
+                <div class="card-header text-center">
+                    <h3>Sign In</h3>
+                </div>
+                <div class="card-body">
+<form formGroup="myreactiveFrom"  (ngSubmit)="regsSubmit()">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">name</label>
+        <input 
+                   type="text" 
+                   class="form-control" 
+                   id="exampleInputEmail1" 
+                   aria-describedby="emailHelp"
+                
+                   formControlName="name"
+                   required>
+                   <small id="namehelp" 
+                   class="text-danger"
+                   *ngIf="myreactiveFrom.controls['name'] &&
+                   myreactiveFrom.controls['name'].touched && 
+                   myreactiveFrom.controls['name'].invalid">
+                   please enter name
+  
+                   </small>
+        
+      </div>
+      
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input 
+                 type="email" 
+                 class="form-control" 
+                 id="exampleInputEmail1" 
+                 aria-describedby="emailHelp"
+                 
+                 formControlName="email"
+                 required>
+                 <small id="emailHelp" 
+                 class="text-danger"
+                 *ngIf="myreactiveFrom.controls['email'] &&
+                 myreactiveFrom.controls['email'].touched && 
+                 myreactiveFrom.controls['email'].invalid">
+                 please enter email
+
+                 </small>
+      
+    </div>
+    
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">username</label>
+        <input 
+                   type="email" 
+                   class="form-control" 
+                   id="exampleInputuser" 
+                   aria-describedby="emailHelp"
+                
+                   formControlName="username"
+                   required>
+                   <small id="emailHelp" 
+                   class="text-danger"
+                   *ngIf="myreactiveFrom.controls['username'] &&
+                   myreactiveFrom.controls['username'].touched && 
+                   myreactiveFrom.controls['username'].invalid">
+                   please enter username
+  
+                   </small>
+        
+      </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input 
+         type="password" 
+         class="form-control" 
+         id="exampleInputPassword1"
+         
+       formControlName="password"
+         required>
+         <small id="emailHelp" 
+         class="text-danger"
+         *ngIf="myreactiveFrom.controls['password'] &&
+         myreactiveFrom.controls['password'].touched && 
+         myreactiveFrom.controls['password'].invalid">
+         please enter password
+
+         </small>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">conferm pawword</label>
+        <input 
+                   type="password" 
+                   class="form-control" 
+                   id="exampleInputEmail1" 
+                   aria-describedby="emailHelp"
+                   formControlName="conformpassword"
+                   required>
+                   <small id="emailHelp" 
+                   class="text-danger"
+                   *ngIf="myreactiveFrom.controls['conformpassword'] &&
+                   myreactiveFrom.controls['conformpassword'].touched && 
+                   myreactiveFrom.controls['conformpassword'].invalid">
+                   please enter email
+  
+                   </small>
+        
+      </div>
+      <label id="lab"></label>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div> 
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+    </div>
+</div>
+</div>
+</div>
+</div>

@@ -5,11 +5,17 @@ import { AppComponent } from './app.component';
 import { ProductsModule } from './products/products.module';
 import { CartsModule } from './carts/carts.module';
 import { SharedModule } from './shared/shared.module';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    RegisterComponent,
+
 
   ],
   imports: [
@@ -17,6 +23,7 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     ProductsModule,
     CartsModule,
+    
     SharedModule,
 
 
